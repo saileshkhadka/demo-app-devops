@@ -1,0 +1,10 @@
+{
+    "name": "app-server",
+    "version": "1.0.0",
+    "description": "Static app server",
+    "scripts": {
+      "start": "http-server -p 5000"
+    },
+    "author": "",
+    "license": "ISC"
+  }

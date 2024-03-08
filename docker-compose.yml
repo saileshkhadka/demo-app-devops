@@ -1,20 +1,20 @@
 version: '3'
 
 services:
-  frontend:
+  app-server:
     build:
-      context: ./frontend
+      context: ./app-server
     ports:
       - "3000:3000"
-
-  backend:
+      
+  web-server:
     build:
-      context: ./backend
+      context: ./web-server
     ports:
-      - "3001:3001"
+      - "5000:5000"
 
-  database:
+  db-server:
     build:
-      context: ./database
+      context: ./db-server
     ports:
       - "1433:1433"

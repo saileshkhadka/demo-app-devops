@@ -1,4 +1,3 @@
--- database/init.sql
 USE master;
 GO
 
