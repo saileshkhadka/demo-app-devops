@@ -14,22 +14,22 @@ then, create one docker-compose file which will handle the multi-container appli
 now run the cmd, 
 - docker-compose up -d 
 
-![copmose-up-cmd](image-1.png)
+![copmose-up-cmd](https://app.screencast.com/r345N14GQCaXf)
 
 This cmd will up the container. We can check it from docker desktop too. 
-![docker-desktop-view](image-2.png)
+![docker-desktop-view](https://app.screencast.com/vacI3txKFz3j2)
 
 We can check it from browser now by accessing the url.
 http://localhost:5000 where the service is running.
 
-![web-server](image-3.png)
+![web-server](https://app.screencast.com/6n3j8AbEjQf9B)
 
 Now, to run these containers in container orchestration tool im using kubernetes and provisioning using minikube. 
 To start minikube, 
 - minikube start
  It will start in local. 
 
-![minikube-start](image-4.png)
+![minikube-start](https://app.screencast.com/7BYEKHWwi01qw)
 
 Now we have to write kubernetes manifest and service file to deploy our application inside multiple pods with proper considerations.
 So, i created deployments file - app-server-deployment.yml, db-server-deployment.yml and web-server-deployment.yml 
@@ -45,22 +45,19 @@ now, apply the kubernetes manifest and service file for all 3 services,
 - kubectl apply -f web-server-deployment.yaml
 - kubectl apply -f web-server-services.yml
 
-![kubectl get pods](image-6.png)
-![kubectl get services](image-7.png)
+![kubectl get pods](https://app.screencast.com/JPElqqZ769nWr)
+![kubectl get services](https://app.screencast.com/kJxoWwhlZRAxy)
 
 We can check it using kubernetes dashboard too by running
 - minikube dashboard
-![minikube dashboard](image-8.png)
-![dashboard-kube](image-11.png)
+![minikube dashboard](https://app.screencast.com/HA4nGhd1gNAfH)
+![dashboard-kube](https://app.screencast.com/XQXo0uvnlVhma)
 
 As i have configured with 3 replica set when deploying app so we can view 9 services for each 3 pods active;
 - kubectl get services
 - kubectl get pods
-![replica-created](image-9.png)
+![replica-created](https://app.screencast.com/oJUsjAlqGGvjm)
 
-Finally, we can see the service is running ![Hello-from-the-web-server](image-10.png)
-and also we can check it from browser too ![browser](image-12.png)
-
-
-
+Finally, we can see the service is running ![Hello-from-the-web-server](https://app.screencast.com/Xqz4YoB8HkgKk)
+and also we can check it from browser too ![browser](https://app.screencast.com/q9QNjdmOE7wBD)
 
