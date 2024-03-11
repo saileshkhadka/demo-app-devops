@@ -40,4 +40,10 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          kubectl apply -f ./kube_deploy
+          kubectl apply -f ./kube_deploy/deployments/app-server-deployment.yml
+          kubectl apply -f ./kube_deploy/deployments/db-server-deployment.yaml
+          kubectl apply -f ./kube_deploy/deployments/web-server-deployment.yaml
+          kubectl apply -f ./kube_deploy/services/app-server-services.yml
+          kubectl apply -f ./kube_deploy/services/db-server-services.yml
+          kubectl apply -f ./kube_deploy/services/web-server-services.yml
+
