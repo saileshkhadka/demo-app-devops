@@ -25,7 +25,6 @@ jobs:
       - name: Push Docker images to Docker Hub
         run: docker-compose push
 
-jobs:
   deploy:
     runs-on: ubuntu-latest
 
