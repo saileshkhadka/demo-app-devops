@@ -60,3 +60,5 @@ As i have configured with 3 replica set when deploying app so we can view 9 serv
 
 Finally, we can see the service is running [Hello-from-the-web-server](https://app.screencast.com/Xqz4YoB8HkgKk)
 and also we can check it from browser too [browser](https://app.screencast.com/q9QNjdmOE7wBD)
+
+_**Note:_** I have also added github ci/cd too
