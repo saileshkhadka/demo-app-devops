@@ -14,7 +14,7 @@ then, create one docker-compose file which will handle the multi-container appli
 now run the cmd, 
 - docker-compose up -d 
 
-[copmose-up-cmd](https://app.screencast.com/r345N14GQCaXf)
+[compose-up-cmd](https://app.screencast.com/r345N14GQCaXf)
 
 This cmd will up the container. We can check it from docker desktop too. 
 [docker-desktop-view](https://app.screencast.com/vacI3txKFz3j2)
