@@ -26,6 +26,7 @@ jobs:
         run: docker-compose push
 
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
