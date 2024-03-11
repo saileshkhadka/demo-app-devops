@@ -14,22 +14,22 @@ then, create one docker-compose file which will handle the multi-container appli
 now run the cmd, 
 - docker-compose up -d 
 
-![copmose-up-cmd](https://app.screencast.com/r345N14GQCaXf)
+[copmose-up-cmd](https://app.screencast.com/r345N14GQCaXf)
 
 This cmd will up the container. We can check it from docker desktop too. 
-![docker-desktop-view](https://app.screencast.com/vacI3txKFz3j2)
+[docker-desktop-view](https://app.screencast.com/vacI3txKFz3j2)
 
 We can check it from browser now by accessing the url.
 http://localhost:5000 where the service is running.
 
-![web-server](https://app.screencast.com/6n3j8AbEjQf9B)
+[web-server](https://app.screencast.com/6n3j8AbEjQf9B)
 
 Now, to run these containers in container orchestration tool im using kubernetes and provisioning using minikube. 
 To start minikube, 
 - minikube start
  It will start in local. 
 
-![minikube-start](https://app.screencast.com/7BYEKHWwi01qw)
+[minikube-start](https://app.screencast.com/7BYEKHWwi01qw)
 
 Now we have to write kubernetes manifest and service file to deploy our application inside multiple pods with proper considerations.
 So, i created deployments file - app-server-deployment.yml, db-server-deployment.yml and web-server-deployment.yml 
@@ -45,19 +45,18 @@ now, apply the kubernetes manifest and service file for all 3 services,
 - kubectl apply -f web-server-deployment.yaml
 - kubectl apply -f web-server-services.yml
 
-![kubectl get pods](https://app.screencast.com/JPElqqZ769nWr)
-![kubectl get services](https://app.screencast.com/kJxoWwhlZRAxy)
+[kubectl get pods](https://app.screencast.com/JPElqqZ769nWr)
+[kubectl get services](https://app.screencast.com/kJxoWwhlZRAxy)
 
 We can check it using kubernetes dashboard too by running
 - minikube dashboard
-![minikube dashboard](https://app.screencast.com/HA4nGhd1gNAfH)
-![dashboard-kube](https://app.screencast.com/XQXo0uvnlVhma)
+[minikube dashboard](https://app.screencast.com/HA4nGhd1gNAfH)
+[dashboard-kube](https://app.screencast.com/XQXo0uvnlVhma)
 
 As i have configured with 3 replica set when deploying app so we can view 9 services for each 3 pods active;
 - kubectl get services
 - kubectl get pods
-![replica-created](https://app.screencast.com/oJUsjAlqGGvjm)
+[replica-created](https://app.screencast.com/oJUsjAlqGGvjm)
 
-Finally, we can see the service is running ![Hello-from-the-web-server](https://app.screencast.com/Xqz4YoB8HkgKk)
-and also we can check it from browser too ![browser](https://app.screencast.com/q9QNjdmOE7wBD)
-
+Finally, we can see the service is running [Hello-from-the-web-server](https://app.screencast.com/Xqz4YoB8HkgKk)
+and also we can check it from browser too [browser](https://app.screencast.com/q9QNjdmOE7wBD)
