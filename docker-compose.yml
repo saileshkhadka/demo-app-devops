@@ -4,17 +4,20 @@ services:
   app-server:
     build:
       context: ./app-server
+    image: sailesh081/demo-app-devops-app-server:latest
     ports:
       - "3000:3000"
       
   web-server:
     build:
       context: ./web-server
+    image: sailesh081/demo-app-devops-web-server:latest
     ports:
       - "5000:5000"
 
   db-server:
     build:
       context: ./db-server
+    image: sailesh081/demo-app-devops-db-server:latest
     ports:
       - "1433:1433"
